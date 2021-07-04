@@ -11,13 +11,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var appCoordinator: Coordinators.App.Coordinator!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = ViewController()
-//        let nvc = UINavigationController(rootViewController: vc)
-        window.makeKeyAndVisible()
-        window.rootViewController = vc
+        appCoordinator = Coordinators.App.Coordinator(presentationStyle: .window(window))
+        appCoordinator.start()
         return true
     }
 

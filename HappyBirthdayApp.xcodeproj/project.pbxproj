@@ -10,7 +10,23 @@
 		225F76C02691D5310019BF8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76BF2691D5310019BF8B /* AppDelegate.swift */; };
 		225F76C42691D5310019BF8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76C32691D5310019BF8B /* ViewController.swift */; };
 		225F76C92691D5330019BF8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225F76C82691D5330019BF8B /* Assets.xcassets */; };
-		225F76CC2691D5330019BF8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225F76CA2691D5330019BF8B /* LaunchScreen.storyboard */; };
+		225F76D82691DA930019BF8B /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76D72691DA930019BF8B /* CoordinatorType.swift */; };
+		225F76DA2691DAD80019BF8B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76D92691DAD80019BF8B /* Coordinator.swift */; };
+		225F76DC2691DC0A0019BF8B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76DB2691DC0A0019BF8B /* AppCoordinator.swift */; };
+		225F76DF2691DF980019BF8B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76DE2691DF980019BF8B /* HomeCoordinator.swift */; };
+		225F76E12691E07D0019BF8B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76E02691E07D0019BF8B /* SplashViewController.swift */; };
+		225F76EE2691E0BF0019BF8B /* SegmentedControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76E32691E0BF0019BF8B /* SegmentedControlBuilder.swift */; };
+		225F76EF2691E0BF0019BF8B /* SnapKitBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76E42691E0BF0019BF8B /* SnapKitBuilder.swift */; };
+		225F76F02691E0BF0019BF8B /* ColorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76E52691E0BF0019BF8B /* ColorBuilder.swift */; };
+		225F76F22691E0BF0019BF8B /* ButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76E72691E0BF0019BF8B /* ButtonBuilder.swift */; };
+		225F76F32691E0BF0019BF8B /* ImageViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76E82691E0BF0019BF8B /* ImageViewBuilder.swift */; };
+		225F76F42691E0BF0019BF8B /* SearchBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76E92691E0BF0019BF8B /* SearchBarBuilder.swift */; };
+		225F76F52691E0BF0019BF8B /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76EA2691E0BF0019BF8B /* NavigationBuilder.swift */; };
+		225F76F62691E0BF0019BF8B /* LabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76EB2691E0BF0019BF8B /* LabelBuilder.swift */; };
+		225F76F72691E0BF0019BF8B /* CollectionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76EC2691E0BF0019BF8B /* CollectionViewBuilder.swift */; };
+		225F76F82691E0BF0019BF8B /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76ED2691E0BF0019BF8B /* ViewBuilder.swift */; };
+		225F76FC2691E14A0019BF8B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76FB2691E14A0019BF8B /* Fonts.swift */; };
+		C1B195C51D7A0F1610A8F1C1 /* Pods_HappyBirthdayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5A1A8718AE57971BA18432 /* Pods_HappyBirthdayApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,8 +34,26 @@
 		225F76BF2691D5310019BF8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		225F76C32691D5310019BF8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		225F76C82691D5330019BF8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		225F76CB2691D5330019BF8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		225F76CD2691D5330019BF8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225F76D72691DA930019BF8B /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		225F76D92691DAD80019BF8B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		225F76DB2691DC0A0019BF8B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		225F76DE2691DF980019BF8B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		225F76E02691E07D0019BF8B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		225F76E32691E0BF0019BF8B /* SegmentedControlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlBuilder.swift; sourceTree = "<group>"; };
+		225F76E42691E0BF0019BF8B /* SnapKitBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapKitBuilder.swift; sourceTree = "<group>"; };
+		225F76E52691E0BF0019BF8B /* ColorBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorBuilder.swift; sourceTree = "<group>"; };
+		225F76E72691E0BF0019BF8B /* ButtonBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBuilder.swift; sourceTree = "<group>"; };
+		225F76E82691E0BF0019BF8B /* ImageViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewBuilder.swift; sourceTree = "<group>"; };
+		225F76E92691E0BF0019BF8B /* SearchBarBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarBuilder.swift; sourceTree = "<group>"; };
+		225F76EA2691E0BF0019BF8B /* NavigationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
+		225F76EB2691E0BF0019BF8B /* LabelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelBuilder.swift; sourceTree = "<group>"; };
+		225F76EC2691E0BF0019BF8B /* CollectionViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewBuilder.swift; sourceTree = "<group>"; };
+		225F76ED2691E0BF0019BF8B /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+		225F76FB2691E14A0019BF8B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		3AC0AD55D716B9A82141EBB3 /* Pods-HappyBirthdayApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBirthdayApp.debug.xcconfig"; path = "Target Support Files/Pods-HappyBirthdayApp/Pods-HappyBirthdayApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3C5A1A8718AE57971BA18432 /* Pods_HappyBirthdayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBirthdayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25203C9CD163F38BB56B820 /* Pods-HappyBirthdayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBirthdayApp.release.xcconfig"; path = "Target Support Files/Pods-HappyBirthdayApp/Pods-HappyBirthdayApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +61,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1B195C51D7A0F1610A8F1C1 /* Pods_HappyBirthdayApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		094ED36FAA6B511EB8886C76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C5A1A8718AE57971BA18432 /* Pods_HappyBirthdayApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		225F76B32691D5310019BF8B = {
 			isa = PBXGroup;
 			children = (
 				225F76BE2691D5310019BF8B /* HappyBirthdayApp */,
 				225F76BD2691D5310019BF8B /* Products */,
+				43245843DD88ED08A77BC2A7 /* Pods */,
+				094ED36FAA6B511EB8886C76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +97,103 @@
 		225F76BE2691D5310019BF8B /* HappyBirthdayApp */ = {
 			isa = PBXGroup;
 			children = (
-				225F76BF2691D5310019BF8B /* AppDelegate.swift */,
-				225F76C32691D5310019BF8B /* ViewController.swift */,
-				225F76C82691D5330019BF8B /* Assets.xcassets */,
-				225F76CA2691D5330019BF8B /* LaunchScreen.storyboard */,
-				225F76CD2691D5330019BF8B /* Info.plist */,
+				225F76D42691DA530019BF8B /* Main */,
+				225F76D32691DA370019BF8B /* Common */,
+				225F76D52691DA640019BF8B /* Flows */,
 			);
 			path = HappyBirthdayApp;
+			sourceTree = "<group>";
+		};
+		225F76D32691DA370019BF8B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				225F76FA2691E11F0019BF8B /* UI */,
+				225F76D62691DA7D0019BF8B /* Coordinator */,
+				225F76F92691E10C0019BF8B /* Builders */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		225F76D42691DA530019BF8B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				225F76C82691D5330019BF8B /* Assets.xcassets */,
+				225F76BF2691D5310019BF8B /* AppDelegate.swift */,
+				225F76DB2691DC0A0019BF8B /* AppCoordinator.swift */,
+				225F76E02691E07D0019BF8B /* SplashViewController.swift */,
+				225F76CD2691D5330019BF8B /* Info.plist */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		225F76D52691DA640019BF8B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				225F76DD2691DF890019BF8B /* Home */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		225F76D62691DA7D0019BF8B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				225F76D72691DA930019BF8B /* CoordinatorType.swift */,
+				225F76D92691DAD80019BF8B /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		225F76DD2691DF890019BF8B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				225F76DE2691DF980019BF8B /* HomeCoordinator.swift */,
+				225F76C32691D5310019BF8B /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		225F76E22691E0BF0019BF8B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				225F76E32691E0BF0019BF8B /* SegmentedControlBuilder.swift */,
+				225F76E42691E0BF0019BF8B /* SnapKitBuilder.swift */,
+				225F76E52691E0BF0019BF8B /* ColorBuilder.swift */,
+				225F76E72691E0BF0019BF8B /* ButtonBuilder.swift */,
+				225F76E82691E0BF0019BF8B /* ImageViewBuilder.swift */,
+				225F76E92691E0BF0019BF8B /* SearchBarBuilder.swift */,
+				225F76EA2691E0BF0019BF8B /* NavigationBuilder.swift */,
+				225F76EB2691E0BF0019BF8B /* LabelBuilder.swift */,
+				225F76EC2691E0BF0019BF8B /* CollectionViewBuilder.swift */,
+				225F76ED2691E0BF0019BF8B /* ViewBuilder.swift */,
+			);
+			name = UI;
+			path = HappyBirthdayApp/Common/Builders/UI;
+			sourceTree = SOURCE_ROOT;
+		};
+		225F76F92691E10C0019BF8B /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				225F76E22691E0BF0019BF8B /* UI */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		225F76FA2691E11F0019BF8B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				225F76FB2691E14A0019BF8B /* Fonts.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		43245843DD88ED08A77BC2A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AC0AD55D716B9A82141EBB3 /* Pods-HappyBirthdayApp.debug.xcconfig */,
+				A25203C9CD163F38BB56B820 /* Pods-HappyBirthdayApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 225F76D02691D5330019BF8B /* Build configuration list for PBXNativeTarget "HappyBirthdayApp" */;
 			buildPhases = (
+				B35108FAAB75FA3C99DDF991 /* [CP] Check Pods Manifest.lock */,
 				225F76B82691D5310019BF8B /* Sources */,
 				225F76B92691D5310019BF8B /* Frameworks */,
 				225F76BA2691D5310019BF8B /* Resources */,
+				86AE0F4C20897949417E0C55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -118,35 +255,81 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				225F76CC2691D5330019BF8B /* LaunchScreen.storyboard in Resources */,
 				225F76C92691D5330019BF8B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		86AE0F4C20897949417E0C55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappyBirthdayApp/Pods-HappyBirthdayApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappyBirthdayApp/Pods-HappyBirthdayApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HappyBirthdayApp/Pods-HappyBirthdayApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B35108FAAB75FA3C99DDF991 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappyBirthdayApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		225F76B82691D5310019BF8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225F76F72691E0BF0019BF8B /* CollectionViewBuilder.swift in Sources */,
+				225F76F82691E0BF0019BF8B /* ViewBuilder.swift in Sources */,
+				225F76F22691E0BF0019BF8B /* ButtonBuilder.swift in Sources */,
+				225F76DA2691DAD80019BF8B /* Coordinator.swift in Sources */,
+				225F76F42691E0BF0019BF8B /* SearchBarBuilder.swift in Sources */,
+				225F76F62691E0BF0019BF8B /* LabelBuilder.swift in Sources */,
+				225F76EF2691E0BF0019BF8B /* SnapKitBuilder.swift in Sources */,
 				225F76C42691D5310019BF8B /* ViewController.swift in Sources */,
+				225F76F02691E0BF0019BF8B /* ColorBuilder.swift in Sources */,
+				225F76F32691E0BF0019BF8B /* ImageViewBuilder.swift in Sources */,
+				225F76DC2691DC0A0019BF8B /* AppCoordinator.swift in Sources */,
 				225F76C02691D5310019BF8B /* AppDelegate.swift in Sources */,
+				225F76EE2691E0BF0019BF8B /* SegmentedControlBuilder.swift in Sources */,
+				225F76D82691DA930019BF8B /* CoordinatorType.swift in Sources */,
+				225F76E12691E07D0019BF8B /* SplashViewController.swift in Sources */,
+				225F76DF2691DF980019BF8B /* HomeCoordinator.swift in Sources */,
+				225F76FC2691E14A0019BF8B /* Fonts.swift in Sources */,
+				225F76F52691E0BF0019BF8B /* NavigationBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		225F76CA2691D5330019BF8B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				225F76CB2691D5330019BF8B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		225F76CE2691D5330019BF8B /* Debug */ = {
@@ -267,12 +450,13 @@
 		};
 		225F76D12691D5330019BF8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AC0AD55D716B9A82141EBB3 /* Pods-HappyBirthdayApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RL889K97T;
-				INFOPLIST_FILE = HappyBirthdayApp/Info.plist;
+				INFOPLIST_FILE = HappyBirthdayApp/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -286,12 +470,13 @@
 		};
 		225F76D22691D5330019BF8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25203C9CD163F38BB56B820 /* Pods-HappyBirthdayApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RL889K97T;
-				INFOPLIST_FILE = HappyBirthdayApp/Info.plist;
+				INFOPLIST_FILE = HappyBirthdayApp/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
