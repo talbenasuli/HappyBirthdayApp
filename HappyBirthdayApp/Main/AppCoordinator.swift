@@ -24,10 +24,14 @@ extension Coordinators.App {
 private extension Coordinators.App.Coordinator {
     
     private func showSplash() {
-        let storyboard = UIStoryboard(name: "LaunchScreen", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Splash")
+        let vc = Launch.ViewController()
+        
+        vc.onFinished
+            .drive(onNext: {
+                self.showHome()
+            }).disposed(by: vc.disposeBag)
+        
         show(vc)
-        showHome()
     }
     
     func showHome() {

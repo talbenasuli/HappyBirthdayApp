@@ -23,4 +23,15 @@ extension UILabel {
         self.text = text
         return self
     }
+    
+    func numberOfLines(_ num: Int) -> Self {
+        numberOfLines = num
+        
+        return self
+    }
+    
+    func textAlignment(_ alignment: NSTextAlignment) -> Self {
+        self.textAlignment = alignment
+        return self
+    }
 }

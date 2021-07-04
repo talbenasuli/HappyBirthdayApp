@@ -5,7 +5,7 @@
 //  Created by Tal Ben Asuli MAC  on 04/07/2021.
 //
 
-import Foundation
+import UIKit
 
 extension UIFont {
     enum App {
