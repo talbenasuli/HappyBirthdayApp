@@ -2,6 +2,9 @@ PODS:
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
+  - RxKeyboard (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
   - RxSwift (6.1.0)
@@ -9,22 +12,25 @@ PODS:
 
 DEPENDENCIES:
   - RxCocoa
+  - RxKeyboard
   - RxSwift
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - RxCocoa
+    - RxKeyboard
     - RxRelay
     - RxSwift
     - SnapKit
 
 SPEC CHECKSUMS:
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 476f08a0a2c13e172f8cd86b04963b49473ca527
+PODFILE CHECKSUM: 256ae2046d426f575a271ab89b8fcb0a61f343ed
 
 COCOAPODS: 1.10.1

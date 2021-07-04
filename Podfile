@@ -7,6 +7,7 @@ target 'HappyBirthdayApp' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxKeyboard'
 
   # Pods for HappyBirthdayApp
 

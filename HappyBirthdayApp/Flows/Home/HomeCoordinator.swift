@@ -7,6 +7,8 @@
 
 import Foundation
 
+enum Details { }
+
 extension Coordinators {
     enum Home { }
 }
@@ -17,7 +19,9 @@ extension Coordinators.Home {
         
         override func start() {
             navigationController.viewControllers.removeAll()
-            show(ViewController())
+            let vm = Details.ViewModel()
+            let vc = Details.ViewController(with: vm)
+            show(vc)
         }
     }
 }

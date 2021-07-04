@@ -28,6 +28,11 @@ extension UIButton {
         setTitleColor(textColor, for: state)
         return self
     }
+    
+    func showsTouchWhenHighlighted(_ show: Bool) -> Self {
+        showsTouchWhenHighlighted = show
+        return self
+    }
 }
 
 extension UIBarButtonItem {
