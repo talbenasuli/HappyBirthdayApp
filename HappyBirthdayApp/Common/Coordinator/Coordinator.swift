@@ -9,7 +9,7 @@ import UIKit
 
 extension Coordinators {
     
-    class Base: CoordinatorType {
+    class Base: NSObject, CoordinatorType {
         
         var navigationController = UINavigationController()
         let presentationStyle: PresentationStyle

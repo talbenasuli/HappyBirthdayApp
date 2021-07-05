@@ -8,6 +8,7 @@ target 'HappyBirthdayApp' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxKeyboard'
+  pod "RxGesture"
 
   # Pods for HappyBirthdayApp
 

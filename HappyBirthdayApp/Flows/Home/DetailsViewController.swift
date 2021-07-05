@@ -9,6 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import RxKeyboard
+import RxGesture
 
 extension Details {
     final class ViewController: UIViewController {
@@ -34,6 +35,10 @@ extension Details {
             .font(UIFont.App.text1.value)
             .placeHolder(viewModel.dateDetailPlaceHolder)
             .delegate(self)
+            .inputView(datePicker)
+        
+        private let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+            .mode(.date)
         
         private let image = UIImageView()
             .image(named: "image_place_holder")
@@ -44,6 +49,9 @@ extension Details {
             .showsTouchWhenHighlighted(true)
             .titleColor(.systemBlue, for: .normal)
             .titleColor(.lightGray, for: .disabled)
+        
+        private lazy var alertContoller = UIAlertController(title: viewModel.alertTitle, message: "", preferredStyle: .actionSheet)
+            .add(viewModel.actions)
             
         private let viewModel: DetailsViewModelType
         
@@ -81,31 +89,36 @@ private extension Details.ViewController {
     func bindViewModel() {
     
         titleTextField.rx.text
-            .orEmpty
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .compactMap({ $0 })
             .distinctUntilChanged()
             .bind(to: viewModel.titleText)
             .disposed(by: disposeBag)
         
         firstDetailTextField.rx.text
-            .orEmpty
-            .scan("") { (previous, new) -> String in
-                return new.count >= 20 ? previous : new
-            }
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .compactMap({ $0 })
             .distinctUntilChanged()
             .bind(to: viewModel.firstDetail)
             .disposed(by: disposeBag)
         
         dateDetailTextField.rx.text
-            .orEmpty
-            .scan("") { (previous, new) -> String in
-                return new.count >= 20 ? previous : new
-            }
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .compactMap({ $0 })
             .distinctUntilChanged()
             .bind(to: viewModel.dateDetail)
             .disposed(by: disposeBag)
         
         viewModel.nextButtonEnable
             .drive(nextButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        datePicker.rx.date
+            .bind(to: viewModel.selectedDate)
+            .disposed(by: disposeBag)
+        
+        viewModel.selectedDateString
+            .drive(dateDetailTextField.rx.text)
             .disposed(by: disposeBag)
     }
     
@@ -145,6 +158,21 @@ private extension Details.ViewController {
             make.top.equalTo(image.snp.bottom).offset(.huge)
             make.bottom.equalToSuperview().offset(.huge)
         }
+        
+        image.rx.tapGesture()
+            .when(.recognized)
+            .map({ _ in return })
+            .bind(to: viewModel.imageTapped)
+            .disposed(by: disposeBag)
+        
+        viewModel.displayAlert
+            .drive(onNext: { show in
+                self.present(self.alertContoller, animated: true)
+            }).disposed(by: disposeBag)
+        
+        viewModel.selectedImage
+            .bind(to: image.rx.image)
+            .disposed(by: disposeBag)
     }
 }
 

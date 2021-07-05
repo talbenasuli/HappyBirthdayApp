@@ -23,4 +23,9 @@ extension UITextField {
         self.delegate = delegate
         return self
     }
+    
+    func inputView(_ view: UIView) -> Self {
+        inputView = view
+        return self
+    }
 }
