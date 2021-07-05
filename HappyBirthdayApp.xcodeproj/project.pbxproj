@@ -22,6 +22,7 @@
 		225F76F62691E0BF0019BF8B /* LabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76EB2691E0BF0019BF8B /* LabelBuilder.swift */; };
 		225F76F82691E0BF0019BF8B /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76ED2691E0BF0019BF8B /* ViewBuilder.swift */; };
 		225F76FC2691E14A0019BF8B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76FB2691E14A0019BF8B /* Fonts.swift */; };
+		227DCD412693B35100D677DA /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DCD402693B35100D677DA /* ImagePickerCoordinator.swift */; };
 		22BA47E72691E348006C5E49 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA47E62691E348006C5E49 /* Padding.swift */; };
 		22BA47E92691E3DE006C5E49 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA47E82691E3DE006C5E49 /* Colors.swift */; };
 		22BA47EE2691E57B006C5E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BA47EB2691E57B006C5E49 /* LaunchScreen.storyboard */; };
@@ -54,6 +55,7 @@
 		225F76EB2691E0BF0019BF8B /* LabelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelBuilder.swift; sourceTree = "<group>"; };
 		225F76ED2691E0BF0019BF8B /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		225F76FB2691E14A0019BF8B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		227DCD402693B35100D677DA /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
 		22BA47E62691E348006C5E49 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		22BA47E82691E3DE006C5E49 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		22BA47EC2691E57B006C5E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				225F76DD2691DF890019BF8B /* Home */,
+				227DCD3F2693B33B00D677DA /* ImagePicker */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -212,6 +215,14 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		227DCD3F2693B33B00D677DA /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				227DCD402693B35100D677DA /* ImagePickerCoordinator.swift */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		22BA47EA2691E57B006C5E49 /* LaunchScreen */ = {
@@ -372,6 +383,7 @@
 				22BA47F52691EF2C006C5E49 /* TextFieldBuilder.swift in Sources */,
 				225F76C02691D5310019BF8B /* AppDelegate.swift in Sources */,
 				225F76D82691DA930019BF8B /* CoordinatorType.swift in Sources */,
+				227DCD412693B35100D677DA /* ImagePickerCoordinator.swift in Sources */,
 				225F76DF2691DF980019BF8B /* HomeCoordinator.swift in Sources */,
 				225F76FC2691E14A0019BF8B /* Fonts.swift in Sources */,
 				22BA47EF2691E57B006C5E49 /* LaunchScreenViewController.swift in Sources */,

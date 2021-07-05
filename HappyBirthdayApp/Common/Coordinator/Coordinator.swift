@@ -50,10 +50,15 @@ extension Coordinators {
                                modalPresentationStyle: UIModalPresentationStyle) {
             switch presentationStyle {
             case .present(let presenting):
-                let nvc = UINavigationController(rootViewController: viewController)
-                navigationController = nvc
+                    
+                if let navigation = viewController as? UINavigationController {
+                    navigationController = navigation
+                } else {
+                    navigationController = UINavigationController(rootViewController: viewController)
+                }
+             
                 navigationController.modalPresentationStyle = modalPresentationStyle
-                presenting.present(nvc, animated: animated)
+                presenting.present(navigationController, animated: animated)
                 
             case .push(let navigation):
                 navigationController = navigation
