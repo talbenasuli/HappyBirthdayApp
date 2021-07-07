@@ -52,9 +52,6 @@ extension Details {
             .titleColor(.systemBlue, for: .normal)
             .titleColor(.lightGray, for: .disabled)
         
-        private lazy var alertContoller = UIAlertController(title: viewModel.alertTitle, message: "", preferredStyle: .actionSheet)
-            .add(viewModel.actions)
-        
         private let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: nil, action: nil)
         private lazy var doneToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 30))
             .isTranslucent(true)
@@ -182,11 +179,6 @@ private extension Details.ViewController {
             .map({ _ in return })
             .bind(to: viewModel.imageTapped)
             .disposed(by: disposeBag)
-        
-        viewModel.displayAlert
-            .drive(onNext: { show in
-                self.present(self.alertContoller, animated: true)
-            }).disposed(by: disposeBag)
         
         viewModel.selectedImage
             .bind(to: image.rx.image)

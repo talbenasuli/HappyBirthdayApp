@@ -12,9 +12,12 @@ import RxSwift
 extension HappyBirthday {
     
     final class ViewModel: HappyBirthdayViewModelType {
-            
+        
+        //input
+        var buttonOnCirclTapped = PublishRelay<Void>()
+        var backTapped = PublishRelay<Void>()
+
         //output
-        let name: String
         lazy var title: String = name
         var leftImageName: String = "leftSwirls"
         var rightImageName: String = "rightSwirls"
@@ -22,9 +25,11 @@ extension HappyBirthday {
         var subtitle = BehaviorRelay<String>(value: "")
         var bottomImageName: String = "nanitLogo"
         var buttonTitle: String = "Share the news"
-        var backTapped = PublishRelay<Void>()
+        var selectedImage = PublishRelay<UIImage>()
+
+        var disposeBag = DisposeBag()
         
-        let disposeBag = DisposeBag()
+        private let name: String
         
         init(birthDate: Date, name: String) {
             self.name = name

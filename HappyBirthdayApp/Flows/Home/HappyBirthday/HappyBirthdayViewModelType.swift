@@ -9,10 +9,11 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-protocol HappyBirthdayViewModelType {
+protocol HappyBirthdayViewModelType: SelectedImageViewModelType {
     
     //input
     var backTapped: PublishRelay<Void> { get }
+    var buttonOnCirclTapped: PublishRelay<Void> { get }
     
     //output
     var title: String { get }

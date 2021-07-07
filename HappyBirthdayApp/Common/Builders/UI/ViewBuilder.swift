@@ -40,5 +40,10 @@ extension UIView {
         self.layer.cornerRadius = cornerRadius
         return self
     }
+    
+    func clipsToBounds(_ clipsToBounds: Bool) -> Self {
+        self.clipsToBounds = clipsToBounds
+        return self
+    }
 }
 

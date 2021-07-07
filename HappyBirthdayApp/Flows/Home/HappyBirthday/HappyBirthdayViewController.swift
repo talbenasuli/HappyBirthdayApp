@@ -32,10 +32,11 @@ extension HappyBirthday {
             .textAlignment(.center)
             .textColor(UIColor.App.darkGreyBlue)
         
-        private lazy var circleView = UIImageView()
+        private lazy var circleImageView = UIImageView()
             .borderWidth(7)
             .borderColor(style.circleBorderColor)
             .backgroundColor(style.circleBackgorundColor)
+            .clipsToBounds(true)
         
         private lazy var bottomLogo = UIImageView()
             .image(named: viewModel.bottomImageName)
@@ -49,8 +50,8 @@ extension HappyBirthday {
             .showsTouchWhenHighlighted(true)
             .backgroundColor(UIColor.App.blush)
         
-        private lazy var buttonOnCircleView = UIButton()
-            .image(UIImage(named: style.buttonOnCircleViewImageName))
+        private lazy var buttonOncircleImageView = UIButton()
+            .image(UIImage(named: style.buttonOncircleImageViewImageName))
         
         private let centerImage = UIImageView()
         private let leftNumberImageView = UIImageView()
@@ -81,7 +82,7 @@ extension HappyBirthday {
         
         override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
-            circleView.layer.cornerRadius = circleView.frame.height / 2
+            circleImageView.layer.cornerRadius = circleImageView.frame.height / 2
             button.layer.cornerRadius = button.frame.height / 2
         }
     }
@@ -106,7 +107,7 @@ private extension HappyBirthday.ViewController {
     }
     
     func layoutViews() {
-        view.add(titleLabel, leftNumberImageView, leftImageView, rightImageView, subtitleLabel, circleView, centerImage, backgroundImageView, bottomLogo, button, buttonOnCircleView)
+        view.add(titleLabel, leftNumberImageView, leftImageView, rightImageView, subtitleLabel, centerImage, backgroundImageView, bottomLogo, button, circleImageView, buttonOncircleImageView)
                         
         titleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(.veryHuge)
@@ -134,18 +135,18 @@ private extension HappyBirthday.ViewController {
             make.top.equalTo(leftNumberImageView.snp.bottom).offset(.small)
         }
         
-        circleView.snp.makeConstraints { make in
+        circleImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(subtitleLabel.snp.bottom).offset(.medium)
             make.width.height.equalTo(250)
         }
         
         centerImage.snp.makeConstraints { make in
-            make.center.equalTo(circleView)
+            make.center.equalTo(circleImageView)
         }
         
         bottomLogo.snp.makeConstraints { make in
-            make.top.equalTo(circleView.snp.bottom).offset(.medium)
+            make.top.equalTo(circleImageView.snp.bottom).offset(.medium)
             make.leading.trailing.equalTo(titleLabel)
         }
         
@@ -155,9 +156,9 @@ private extension HappyBirthday.ViewController {
             make.top.equalTo(bottomLogo.snp.bottom).offset(.medium)
         }
         
-        buttonOnCircleView.snp.makeConstraints { make in
-            make.top.equalTo(circleView).offset(.small)
-            make.trailing.equalTo(circleView).inset(.medium)
+        buttonOncircleImageView.snp.makeConstraints { make in
+            make.top.equalTo(circleImageView).offset(.small)
+            make.trailing.equalTo(circleImageView).inset(.medium)
         }
         
         backgroundImageView.snp.makeConstraints { make in
@@ -169,7 +170,7 @@ private extension HappyBirthday.ViewController {
         backgroundImageView.image = UIImage(named: style.backgroundName)
         view.backgroundColor = style.backgroundColor
         centerImage.image = UIImage(named: style.centerImageViewName)
-        circleView.image = UIImage(named: style.centerImageViewName)
+        circleImageView.image = UIImage(named: style.centerImageViewName)
     }
     
     func bindViewModel() {
@@ -181,6 +182,14 @@ private extension HappyBirthday.ViewController {
         
         viewModel.subtitle
             .bind(to: subtitleLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        buttonOncircleImageView.rx.tap
+            .bind(to: viewModel.buttonOnCirclTapped)
+            .disposed(by: disposeBag)
+        
+        viewModel.selectedImage
+            .bind(to: circleImageView.rx.image)
             .disposed(by: disposeBag)
     }
 }
@@ -208,7 +217,7 @@ extension HappyBirthday.ViewController {
             }
         }
         
-        var buttonOnCircleViewImageName: String {
+        var buttonOncircleImageViewImageName: String {
             switch self {
             case .fox: return "cameraIconGreen"
             case .elephant: return "cameraIconYellow"

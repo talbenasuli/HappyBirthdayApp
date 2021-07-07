@@ -31,16 +31,9 @@ private extension Coordinators.Home.Coordinator {
     func showDetails() {
         let vm = Details.ViewModel()
         
-        vm.firstActionTapped
-            .drive(onNext: { [weak vm] in
-                guard let vm = vm else { return }
-                self.showImagePicker(with: vm, sourceType: .camera)
-            }).disposed(by: vm.disposeBag)
-        
-        vm.secondActionTapped
-            .drive(onNext: { [weak vm] in
-                guard let vm = vm else { return }
-                self.showImagePicker(with: vm, sourceType: .photoLibrary)
+        vm.imageTapped
+            .subscribe(onNext: {
+                self.showActions(with: vm)
             }).disposed(by: vm.disposeBag)
         
         vm.onNextTapped
@@ -52,7 +45,26 @@ private extension Coordinators.Home.Coordinator {
         show(vc)
     }
     
-    func showImagePicker(with viewModel: Details.ViewModel, sourceType: UIImagePickerController.SourceType) {
+    func showActions(with vm: SelectedImageViewModelType) {
+        let cancelAction =  UIAlertAction(title: "Cancel", style: .default) { _ in }
+        
+        let openCameraAction = UIAlertAction(title: "Take A Photo", style: .default) { action in
+            self.showImagePicker(with: vm, sourceType: .camera)
+        }
+        
+        let openGaleryAction = UIAlertAction(title: "Choose A Photo", style: .default) { action in
+            self.showImagePicker(with: vm, sourceType: .photoLibrary)
+        }
+        let actions = [openCameraAction, openGaleryAction, cancelAction]
+        let presenting = navigationController.viewControllers.last
+        
+        let alertContoller = UIAlertController(title: "Please Choose", message: "", preferredStyle: .actionSheet)
+            .add(actions)
+        
+        presenting?.present(alertContoller, animated: true)
+    }
+    
+    func showImagePicker(with viewModel: SelectedImageViewModelType, sourceType: UIImagePickerController.SourceType) {
         guard let presenting = navigationController.viewControllers.last else { return }
         let coordinator = Coordinators.ImagePicker.Coordinator(with: sourceType, presentationStyle: .present(presenting: presenting))
         self.imagePickerCoordinator = coordinator
@@ -75,6 +87,11 @@ private extension Coordinators.Home.Coordinator {
             .map { return true }
             .bind(to: (self as Coordinators.Base).rx.pop)
             .disposed(by: vm.disposeBag)
+        
+        vm.buttonOnCirclTapped
+            .subscribe(onNext: {
+                self.showActions(with: vm)
+            }).disposed(by: vm.disposeBag)
         
         let vc = HappyBirthday.ViewController(with: vm, style: style)
         show(vc)
