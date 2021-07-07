@@ -14,6 +14,7 @@ protocol HappyBirthdayViewModelType: SelectedImageViewModelType {
     //input
     var backTapped: PublishRelay<Void> { get }
     var buttonOnCirclTapped: PublishRelay<Void> { get }
+    var bottomButtonTapped: PublishRelay<UIView> { get }
     
     //output
     var title: String { get }
@@ -23,4 +24,5 @@ protocol HappyBirthdayViewModelType: SelectedImageViewModelType {
     var subtitle: BehaviorRelay<String> { get }
     var bottomImageName: String { get }
     var buttonTitle: String { get }
+    var onSnapshotReady: Driver<UIImage?> { get }
 }

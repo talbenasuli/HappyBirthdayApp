@@ -47,7 +47,6 @@ extension HappyBirthday {
             .font(UIFont.App.text2.value)
             .image(UIImage(named: "icShareWhiteSmall"))
             .semanticContentAttribute(.forceRightToLeft)
-            .showsTouchWhenHighlighted(true)
             .backgroundColor(UIColor.App.blush)
         
         private lazy var buttonOncircleImageView = UIButton()
@@ -191,6 +190,23 @@ private extension HappyBirthday.ViewController {
         viewModel.selectedImage
             .bind(to: circleImageView.rx.image)
             .disposed(by: disposeBag)
+        
+        button.rx.tap
+            .map {
+                self.button.isHidden = true
+                self.navigationController?.setNavigationBarHidden(true, animated: false)
+                self.buttonOncircleImageView.isHidden = true
+                return self.view
+            }
+            .bind(to: viewModel.bottomButtonTapped)
+            .disposed(by: disposeBag)
+        
+        viewModel.onSnapshotReady
+            .drive(onNext: { [weak self] _ in
+                self?.button.isHidden = false
+                self?.navigationController?.setNavigationBarHidden(false, animated: false)
+                self?.buttonOncircleImageView.isHidden = false
+            }).disposed(by: disposeBag)
     }
 }
 

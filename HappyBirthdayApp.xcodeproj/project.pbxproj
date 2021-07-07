@@ -139,7 +139,6 @@
 		225F76D32691DA370019BF8B /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				227DCD3E2693AFA700D677DA /* Service */,
 				225F76FA2691E11F0019BF8B /* UI */,
 				225F76D62691DA7D0019BF8B /* Coordinator */,
 				225F76F92691E10C0019BF8B /* Builders */,
@@ -225,13 +224,6 @@
 				22BA47E82691E3DE006C5E49 /* Colors.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		227DCD3E2693AFA700D677DA /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		227DCD3F2693B33B00D677DA /* ImagePicker */ = {

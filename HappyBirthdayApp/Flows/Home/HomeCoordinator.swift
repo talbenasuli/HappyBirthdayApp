@@ -74,7 +74,18 @@ private extension Coordinators.Home.Coordinator {
                 self.showImagePicker(with: vm)
             }).disposed(by: vm.disposeBag)
         
+        vm.onSnapshotReady
+            .drive(onNext: { image in
+                self.showShare(with: image)
+            }).disposed(by: vm.disposeBag)
+        
         let vc = HappyBirthday.ViewController(with: vm, style: style)
         show(vc)
+    }
+    
+    func showShare(with image: UIImage?) {
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        let presenting = navigationController.viewControllers.last
+        presenting?.present(activityViewController, animated: true)
     }
 }

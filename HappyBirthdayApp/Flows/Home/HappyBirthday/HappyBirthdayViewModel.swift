@@ -12,10 +12,11 @@ import RxSwift
 extension HappyBirthday {
     
     final class ViewModel: HappyBirthdayViewModelType {
-        
+            
         //input
         var buttonOnCirclTapped = PublishRelay<Void>()
         var backTapped = PublishRelay<Void>()
+        var bottomButtonTapped = PublishRelay<UIView>()
 
         //output
         lazy var title: String = name
@@ -26,6 +27,7 @@ extension HappyBirthday {
         var bottomImageName: String = "nanitLogo"
         var buttonTitle: String = "Share the news"
         var selectedImage = PublishRelay<UIImage>()
+        var onSnapshotReady: Driver<UIImage?>
 
         var disposeBag = DisposeBag()
         
@@ -33,7 +35,23 @@ extension HappyBirthday {
         
         init(birthDate: Date, name: String) {
             self.name = name
+            
+            let _onSnapshotReady = PublishRelay<UIImage?>()
+            onSnapshotReady = _onSnapshotReady.asDriver(onErrorDriveWith: .never())
+
             setAge(from: birthDate)
+            
+            bottomButtonTapped.subscribe(onNext: { view in
+                
+                UIGraphicsBeginImageContextWithOptions(
+                         CGSize(width: view.bounds.width, height: view.bounds.height),
+                         false,
+                         2)
+                     view.layer.render(in: UIGraphicsGetCurrentContext()!)
+                     let screenshot = UIGraphicsGetImageFromCurrentImageContext()!
+                     UIGraphicsEndImageContext()
+                _onSnapshotReady.accept(screenshot)
+            }).disposed(by: disposeBag)
         }
     }
 }
