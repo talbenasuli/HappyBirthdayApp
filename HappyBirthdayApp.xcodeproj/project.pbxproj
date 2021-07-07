@@ -23,6 +23,11 @@
 		225F76F82691E0BF0019BF8B /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76ED2691E0BF0019BF8B /* ViewBuilder.swift */; };
 		225F76FC2691E14A0019BF8B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F76FB2691E14A0019BF8B /* Fonts.swift */; };
 		227DCD412693B35100D677DA /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DCD402693B35100D677DA /* ImagePickerCoordinator.swift */; };
+		227DCD492694569500D677DA /* HappyBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DCD482694569500D677DA /* HappyBirthdayViewController.swift */; };
+		227DCD4B269456BF00D677DA /* DetailsNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DCD4A269456BF00D677DA /* DetailsNamespace.swift */; };
+		227DCD4D269456EF00D677DA /* HappyBirthdayNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DCD4C269456EF00D677DA /* HappyBirthdayNamespace.swift */; };
+		227DCD4F2694572200D677DA /* HappyBirthdayViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DCD4E2694572200D677DA /* HappyBirthdayViewModelType.swift */; };
+		227DCD512694573100D677DA /* HappyBirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DCD502694573100D677DA /* HappyBirthdayViewModel.swift */; };
 		22BA47E72691E348006C5E49 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA47E62691E348006C5E49 /* Padding.swift */; };
 		22BA47E92691E3DE006C5E49 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA47E82691E3DE006C5E49 /* Colors.swift */; };
 		22BA47EE2691E57B006C5E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BA47EB2691E57B006C5E49 /* LaunchScreen.storyboard */; };
@@ -34,6 +39,8 @@
 		22BA47F926920AC5006C5E49 /* DateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA47F826920AC5006C5E49 /* DateBuilder.swift */; };
 		22BA47FE269216F0006C5E49 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA47FD269216F0006C5E49 /* AlertBuilder.swift */; };
 		22BA48032692216C006C5E49 /* Rx+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA48022692216C006C5E49 /* Rx+UIView.swift */; };
+		22CC8A4B26962E4A00CCE8A7 /* Rx+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC8A4A26962E4A00CCE8A7 /* Rx+Coordinator.swift */; };
+		22CC8A4D269630FF00CCE8A7 /* ToolBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC8A4C269630FF00CCE8A7 /* ToolBarBuilder.swift */; };
 		C1B195C51D7A0F1610A8F1C1 /* Pods_HappyBirthdayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5A1A8718AE57971BA18432 /* Pods_HappyBirthdayApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +63,11 @@
 		225F76ED2691E0BF0019BF8B /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		225F76FB2691E14A0019BF8B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		227DCD402693B35100D677DA /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
+		227DCD482694569500D677DA /* HappyBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBirthdayViewController.swift; sourceTree = "<group>"; };
+		227DCD4A269456BF00D677DA /* DetailsNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsNamespace.swift; sourceTree = "<group>"; };
+		227DCD4C269456EF00D677DA /* HappyBirthdayNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBirthdayNamespace.swift; sourceTree = "<group>"; };
+		227DCD4E2694572200D677DA /* HappyBirthdayViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBirthdayViewModelType.swift; sourceTree = "<group>"; };
+		227DCD502694573100D677DA /* HappyBirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBirthdayViewModel.swift; sourceTree = "<group>"; };
 		22BA47E62691E348006C5E49 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		22BA47E82691E3DE006C5E49 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		22BA47EC2691E57B006C5E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +79,8 @@
 		22BA47F826920AC5006C5E49 /* DateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBuilder.swift; sourceTree = "<group>"; };
 		22BA47FD269216F0006C5E49 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		22BA48022692216C006C5E49 /* Rx+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+UIView.swift"; sourceTree = "<group>"; };
+		22CC8A4A26962E4A00CCE8A7 /* Rx+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Coordinator.swift"; sourceTree = "<group>"; };
+		22CC8A4C269630FF00CCE8A7 /* ToolBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarBuilder.swift; sourceTree = "<group>"; };
 		3AC0AD55D716B9A82141EBB3 /* Pods-HappyBirthdayApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBirthdayApp.debug.xcconfig"; path = "Target Support Files/Pods-HappyBirthdayApp/Pods-HappyBirthdayApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3C5A1A8718AE57971BA18432 /* Pods_HappyBirthdayApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyBirthdayApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25203C9CD163F38BB56B820 /* Pods-HappyBirthdayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyBirthdayApp.release.xcconfig"; path = "Target Support Files/Pods-HappyBirthdayApp/Pods-HappyBirthdayApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,9 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				225F76DE2691DF980019BF8B /* HomeCoordinator.swift */,
-				22BA47F02691EC75006C5E49 /* DetailsViewModelType.swift */,
-				22BA47F22691EC86006C5E49 /* DetailsViewModel.swift */,
-				225F76C32691D5310019BF8B /* DetailsViewController.swift */,
+				227DCD462694564800D677DA /* Details */,
+				227DCD472694565C00D677DA /* HappyBirthday */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -184,6 +197,7 @@
 				225F76ED2691E0BF0019BF8B /* ViewBuilder.swift */,
 				22BA47F42691EF2C006C5E49 /* TextFieldBuilder.swift */,
 				22BA47F62692086A006C5E49 /* DatePickerBuilder.swift */,
+				22CC8A4C269630FF00CCE8A7 /* ToolBarBuilder.swift */,
 			);
 			name = UI;
 			path = HappyBirthdayApp/Common/Builders/UI;
@@ -225,6 +239,28 @@
 			path = ImagePicker;
 			sourceTree = "<group>";
 		};
+		227DCD462694564800D677DA /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				227DCD4A269456BF00D677DA /* DetailsNamespace.swift */,
+				22BA47F02691EC75006C5E49 /* DetailsViewModelType.swift */,
+				22BA47F22691EC86006C5E49 /* DetailsViewModel.swift */,
+				225F76C32691D5310019BF8B /* DetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		227DCD472694565C00D677DA /* HappyBirthday */ = {
+			isa = PBXGroup;
+			children = (
+				227DCD4C269456EF00D677DA /* HappyBirthdayNamespace.swift */,
+				227DCD4E2694572200D677DA /* HappyBirthdayViewModelType.swift */,
+				227DCD502694573100D677DA /* HappyBirthdayViewModel.swift */,
+				227DCD482694569500D677DA /* HappyBirthdayViewController.swift */,
+			);
+			path = HappyBirthday;
+			sourceTree = "<group>";
+		};
 		22BA47EA2691E57B006C5E49 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				22BA48022692216C006C5E49 /* Rx+UIView.swift */,
+				22CC8A4A26962E4A00CCE8A7 /* Rx+Coordinator.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -373,10 +410,14 @@
 				225F76F22691E0BF0019BF8B /* ButtonBuilder.swift in Sources */,
 				225F76DA2691DAD80019BF8B /* Coordinator.swift in Sources */,
 				22BA48032692216C006C5E49 /* Rx+UIView.swift in Sources */,
+				22CC8A4D269630FF00CCE8A7 /* ToolBarBuilder.swift in Sources */,
 				225F76F62691E0BF0019BF8B /* LabelBuilder.swift in Sources */,
+				227DCD492694569500D677DA /* HappyBirthdayViewController.swift in Sources */,
 				225F76EF2691E0BF0019BF8B /* SnapKitBuilder.swift in Sources */,
 				225F76C42691D5310019BF8B /* DetailsViewController.swift in Sources */,
 				22BA47FE269216F0006C5E49 /* AlertBuilder.swift in Sources */,
+				227DCD512694573100D677DA /* HappyBirthdayViewModel.swift in Sources */,
+				227DCD4B269456BF00D677DA /* DetailsNamespace.swift in Sources */,
 				225F76F02691E0BF0019BF8B /* ColorBuilder.swift in Sources */,
 				225F76F32691E0BF0019BF8B /* ImageViewBuilder.swift in Sources */,
 				225F76DC2691DC0A0019BF8B /* AppCoordinator.swift in Sources */,
@@ -387,8 +428,11 @@
 				225F76DF2691DF980019BF8B /* HomeCoordinator.swift in Sources */,
 				225F76FC2691E14A0019BF8B /* Fonts.swift in Sources */,
 				22BA47EF2691E57B006C5E49 /* LaunchScreenViewController.swift in Sources */,
+				227DCD4D269456EF00D677DA /* HappyBirthdayNamespace.swift in Sources */,
 				225F76F52691E0BF0019BF8B /* NavigationBuilder.swift in Sources */,
+				227DCD4F2694572200D677DA /* HappyBirthdayViewModelType.swift in Sources */,
 				22BA47F926920AC5006C5E49 /* DateBuilder.swift in Sources */,
+				22CC8A4B26962E4A00CCE8A7 /* Rx+Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

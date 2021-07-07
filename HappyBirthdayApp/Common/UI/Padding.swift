@@ -13,4 +13,5 @@ enum Padding: Int {
     case medium = 24
     case big = 32
     case huge = 40
+    case veryHuge = 75
 }

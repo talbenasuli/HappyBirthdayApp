@@ -9,8 +9,6 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-enum Details { }
-
 extension Coordinators {
     enum Home { }
 }
@@ -45,6 +43,11 @@ private extension Coordinators.Home.Coordinator {
                 self.showImagePicker(with: vm, sourceType: .photoLibrary)
             }).disposed(by: vm.disposeBag)
         
+        vm.onNextTapped
+            .subscribe(onNext: { (birthDate, name) in
+                self.showHappyBirthday(with: birthDate, and: name)
+            }).disposed(by: vm.disposeBag)
+        
         let vc = Details.ViewController(with: vm)
         show(vc)
     }
@@ -61,5 +64,19 @@ private extension Coordinators.Home.Coordinator {
             }).disposed(by: viewModel.disposeBag)
         
         coordinator.start()
+    }
+    
+    func showHappyBirthday(with birthDate: Date, and name: String) {
+        let vm = HappyBirthday.ViewModel(birthDate: birthDate, name: name)
+        let randomNumber = Int.random(in: 0...2)
+        guard let style = HappyBirthday.ViewController.Style(rawValue: randomNumber) else { return }
+        
+        vm.backTapped
+            .map { return true }
+            .bind(to: (self as Coordinators.Base).rx.pop)
+            .disposed(by: vm.disposeBag)
+        
+        let vc = HappyBirthday.ViewController(with: vm, style: style)
+        show(vc)
     }
 }

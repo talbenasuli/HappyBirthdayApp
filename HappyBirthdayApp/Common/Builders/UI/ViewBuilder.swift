@@ -27,7 +27,7 @@ extension UIView {
     }
     
     func borderColor(_ color: UIColor) -> Self {
-        layer.borderColor = UIColor.white.cgColor
+        layer.borderColor = color.cgColor
         return self
     }
     

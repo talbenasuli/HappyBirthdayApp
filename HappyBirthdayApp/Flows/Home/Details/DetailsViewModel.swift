@@ -20,6 +20,7 @@ extension Details {
         var selectedDate    = PublishRelay<Date>()
         var imageTapped     = PublishRelay<Void>()
         var selectedImage   = PublishRelay<UIImage>()
+        var onNextTapped    = PublishRelay<(Date, String)>()
         
         //output
         var titlePlaceHolder: String = "App Title"
@@ -34,6 +35,7 @@ extension Details {
         var displayAlert: Driver<Void>
         var secondActionTapped: Driver<Void>
         var firstActionTapped: Driver<Void>
+        var maxDate: Date? = Date()
 
         let disposeBag = DisposeBag()
         private var alertDisplayed = false

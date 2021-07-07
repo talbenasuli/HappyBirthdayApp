@@ -13,4 +13,9 @@ extension UIDatePicker {
         datePickerMode = mode
         return self
     }
+    
+    func max(date: Date?) -> Self {
+        maximumDate = date
+        return self
+    }
 }

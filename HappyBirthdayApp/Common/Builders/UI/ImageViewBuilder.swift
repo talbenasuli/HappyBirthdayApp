@@ -17,4 +17,9 @@ extension UIImageView {
         self.image = image
         return self
     }
+    
+    func contentMode(_ contentMode: UIView.ContentMode) -> Self {
+        self.contentMode = contentMode
+        return self
+    }
 }

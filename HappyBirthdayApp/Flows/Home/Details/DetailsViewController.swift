@@ -34,12 +34,14 @@ extension Details {
             .borderColor(.clear)
             .font(UIFont.App.text1.value)
             .placeHolder(viewModel.dateDetailPlaceHolder)
+            .inputAccessoryView(doneToolBar)
             .delegate(self)
             .inputView(datePicker)
         
-        private let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        private lazy var datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
             .mode(.date)
-        
+            .max(date: viewModel.maxDate)
+
         private let image = UIImageView()
             .image(named: "image_place_holder")
         
@@ -52,6 +54,12 @@ extension Details {
         
         private lazy var alertContoller = UIAlertController(title: viewModel.alertTitle, message: "", preferredStyle: .actionSheet)
             .add(viewModel.actions)
+        
+        private let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: nil, action: nil)
+        private lazy var doneToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 30))
+            .isTranslucent(true)
+            .barStyle(.default)
+            .add(buttons: [doneBarButton])
             
         private let viewModel: DetailsViewModelType
         
@@ -84,6 +92,11 @@ private extension Details.ViewController {
             scrollView.contentInset.bottom = keyboardVisibleHeight + padding
           })
           .disposed(by: disposeBag)
+        
+        doneBarButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.view.endEditing(true)
+            }).disposed(by: disposeBag)
     }
     
     func bindViewModel() {
@@ -111,6 +124,11 @@ private extension Details.ViewController {
         
         viewModel.nextButtonEnable
             .drive(nextButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        nextButton.rx.tap
+            .map { return (self.datePicker.date, self.firstDetailTextField.text ?? "") }
+            .bind(to: viewModel.onNextTapped)
             .disposed(by: disposeBag)
         
         datePicker.rx.date
@@ -180,9 +198,9 @@ extension Details.ViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let count = textField.text?.count ?? 0 + string.count
         if textField === titleTextField {
-            return count < 15 || string == ""
+            return count < 40 || string == ""
         } else {
-            return count < 20 || string == ""
+            return count < 50 || string == ""
         }
     }
 }

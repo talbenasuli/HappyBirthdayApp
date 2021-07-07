@@ -14,8 +14,18 @@ extension UIButton {
         return self
     }
     
-    func image(_ image: UIImage, for state: UIControl.State = .normal) -> Self {
+    func title(_ title: NSAttributedString, for state: UIControl.State = .normal) -> Self {
+        setAttributedTitle(title, for: state)
+        return self
+    }
+    
+    func image(_ image: UIImage?, for state: UIControl.State = .normal) -> Self {
         setImage(image, for: state)
+        return self
+    }
+    
+    func semanticContentAttribute( _ semanticContentAttribute: UISemanticContentAttribute) -> Self {
+        self.semanticContentAttribute = semanticContentAttribute
         return self
     }
     
@@ -31,6 +41,16 @@ extension UIButton {
     
     func showsTouchWhenHighlighted(_ show: Bool) -> Self {
         showsTouchWhenHighlighted = show
+        return self
+    }
+    
+    func backgound(_ image: UIImage, for state: UIControl.State = .normal) -> Self {
+        self.setImage(image, for: state)
+        return self
+    }
+    
+    func contentMode(_ contentMode: UIView.ContentMode) -> Self {
+        self.contentMode = contentMode
         return self
     }
 }

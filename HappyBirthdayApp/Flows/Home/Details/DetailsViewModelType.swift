@@ -18,6 +18,7 @@ protocol DetailsViewModelType {
     var selectedDate: PublishRelay<Date> { get }
     var imageTapped: PublishRelay<Void> { get }
     var selectedImage: PublishRelay<UIImage> { get }
+    var onNextTapped: PublishRelay<(Date, String)> { get }
     
     //output
     var titlePlaceHolder: String { get }
@@ -31,4 +32,5 @@ protocol DetailsViewModelType {
     var displayAlert: Driver<Void> { get }
     var secondActionTapped: Driver<Void> { get }
     var firstActionTapped: Driver<Void> { get }
+    var maxDate: Date? { get }
 }

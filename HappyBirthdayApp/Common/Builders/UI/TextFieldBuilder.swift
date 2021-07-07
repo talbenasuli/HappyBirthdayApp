@@ -28,4 +28,9 @@ extension UITextField {
         inputView = view
         return self
     }
+    
+    func inputAccessoryView(_ view: UIView) -> Self {
+        inputAccessoryView = view
+        return self
+    }
 }
