@@ -33,7 +33,7 @@ private extension Coordinators.Home.Coordinator {
         
         vm.imageTapped
             .subscribe(onNext: {
-                self.showActions(with: vm)
+                self.showImagePicker(with: vm)
             }).disposed(by: vm.disposeBag)
         
         vm.onNextTapped
@@ -45,28 +45,9 @@ private extension Coordinators.Home.Coordinator {
         show(vc)
     }
     
-    func showActions(with vm: SelectedImageViewModelType) {
-        let cancelAction =  UIAlertAction(title: "Cancel", style: .default) { _ in }
-        
-        let openCameraAction = UIAlertAction(title: "Take A Photo", style: .default) { action in
-            self.showImagePicker(with: vm, sourceType: .camera)
-        }
-        
-        let openGaleryAction = UIAlertAction(title: "Choose A Photo", style: .default) { action in
-            self.showImagePicker(with: vm, sourceType: .photoLibrary)
-        }
-        let actions = [openCameraAction, openGaleryAction, cancelAction]
-        let presenting = navigationController.viewControllers.last
-        
-        let alertContoller = UIAlertController(title: "Please Choose", message: "", preferredStyle: .actionSheet)
-            .add(actions)
-        
-        presenting?.present(alertContoller, animated: true)
-    }
-    
-    func showImagePicker(with viewModel: SelectedImageViewModelType, sourceType: UIImagePickerController.SourceType) {
+    func showImagePicker(with viewModel: SelectedImageViewModelType) {
         guard let presenting = navigationController.viewControllers.last else { return }
-        let coordinator = Coordinators.ImagePicker.Coordinator(with: sourceType, presentationStyle: .present(presenting: presenting))
+        let coordinator = Coordinators.ImagePicker.Coordinator(presentationStyle: .present(presenting: presenting))
         self.imagePickerCoordinator = coordinator
         
         coordinator.image
@@ -90,7 +71,7 @@ private extension Coordinators.Home.Coordinator {
         
         vm.buttonOnCirclTapped
             .subscribe(onNext: {
-                self.showActions(with: vm)
+                self.showImagePicker(with: vm)
             }).disposed(by: vm.disposeBag)
         
         let vc = HappyBirthday.ViewController(with: vm, style: style)

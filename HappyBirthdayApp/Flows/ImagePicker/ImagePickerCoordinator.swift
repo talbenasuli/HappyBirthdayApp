@@ -16,25 +16,39 @@ extension Coordinators {
 extension Coordinators.ImagePicker {
     
     final class Coordinator: Coordinators.Base {
-        
-        private let sourceType: UIImagePickerController.SourceType
-        
+                
         private let _image = PublishRelay<UIImage>()
         lazy var image = _image.asDriver(onErrorDriveWith: .never())
         
-        init(with sourceType: UIImagePickerController.SourceType,
-             presentationStyle: Coordinators.PresentationStyle) {
-            self.sourceType = sourceType
-            super.init(presentationStyle: presentationStyle)
-        }
-        
         override func start() {
-            showImagePicker(with: sourceType)
+            showActions()
         }
     }
 }
 
 private extension Coordinators.ImagePicker.Coordinator {
+    
+    func showActions() {
+        let cancelAction =  UIAlertAction(title: "Cancel", style: .default) { _ in }
+        
+        let openCameraAction = UIAlertAction(title: "Take A Photo", style: .default) { action in
+            self.showImagePicker(with: .camera)
+        }
+        
+        let openGaleryAction = UIAlertAction(title: "Choose A Photo", style: .default) { action in
+            self.showImagePicker(with: .photoLibrary)
+        }
+        let actions = [openCameraAction, openGaleryAction, cancelAction]
+        
+        let alertContoller = UIAlertController(title: "Please Choose", message: "", preferredStyle: .actionSheet)
+            .add(actions)
+        
+        switch presentationStyle {
+        case .present(let presenting): presenting.present(alertContoller, animated: true)
+        default: break
+        }
+    }
+    
     
     func showImagePicker(with sourceType: UIImagePickerController.SourceType) {
         let imagePicker = UIImagePickerController()
