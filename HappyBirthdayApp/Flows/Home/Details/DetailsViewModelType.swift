@@ -27,4 +27,5 @@ protocol DetailsViewModelType: SelectedImageViewModelType {
     var nextButtonEnable: Driver<Bool> { get }
     var selectedDateString: Driver<String> { get }
     var maxDate: Date? { get }
+    var minDate: Date? { get }
 }

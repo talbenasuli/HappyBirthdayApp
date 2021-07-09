@@ -32,6 +32,7 @@ extension Details {
         var nextButtonEnable: Driver<Bool>
         var selectedDateString: Driver<String>
         var maxDate: Date? = Date()
+        var minDate: Date? = Calendar.current.date(byAdding: .year, value: -12, to: Date())
 
         var disposeBag = DisposeBag()
         private var alertDisplayed = false

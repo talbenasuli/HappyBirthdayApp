@@ -18,4 +18,9 @@ extension UIDatePicker {
         maximumDate = date
         return self
     }
+    
+    func min(date: Date?) -> Self {
+        minimumDate = date
+        return self
+    }
 }

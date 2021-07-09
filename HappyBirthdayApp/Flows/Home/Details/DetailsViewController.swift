@@ -41,6 +41,7 @@ extension Details {
         private lazy var datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
             .mode(.date)
             .max(date: viewModel.maxDate)
+            .min(date: viewModel.minDate)
 
         private let image = UIImageView()
             .image(named: "image_place_holder")
