@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 import RxKeyboard
 import RxGesture
+import RxAppState
 
 extension Details {
     final class ViewController: UIViewController {

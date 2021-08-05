@@ -1,4 +1,7 @@
 PODS:
+  - RxAppState (1.7.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
@@ -14,6 +17,7 @@ PODS:
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - RxAppState
   - RxCocoa
   - RxGesture
   - RxKeyboard
@@ -22,6 +26,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - RxAppState
     - RxCocoa
     - RxGesture
     - RxKeyboard
@@ -30,6 +35,7 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
+  RxAppState: 20985b89f0b5d19aa67cf9b0ca38d07878e2fcae
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxGesture: f059f2aeef966fb17dad56ee440e76410f10e55f
   RxKeyboard: 4f5863f43b4ff0cbb2a20b94688d6b80c8a43c14
@@ -37,6 +43,6 @@ SPEC CHECKSUMS:
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: b4b2b765487a49f779b9f4ac70934172710421ca
+PODFILE CHECKSUM: 0f9a0adf936d8cb74e223f2efab616e2d72f7f59
 
 COCOAPODS: 1.10.1
